@@ -329,68 +329,119 @@ export default function InterviewCopilot() {
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
-      <section id="features" className="py-24 px-6">
+      {/* FEATURES SECTION - Cluely Style */}
+      <section id="features" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full mb-6">
-              Four Ways We Transform Your Interviews
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              From nervous to <span className="text-blue-600">unshakeable</span>
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+              Four ways we make your<br />interviews better
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real-time intelligence that makes you sound like the expert you are
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-            {/* Feature 1 */}
-            <div className="order-2 md:order-1">
-              <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full mb-4 uppercase tracking-wide">
-                Real-Time Answers
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                AI that answers questions for you, instantly
-              </h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                The moment a question is asked, Interview Copilot generates a perfect answer based on your resume, the job description, and the conversation context. No more freezing. No more "umm..."
-              </p>
-              <div className="space-y-3">
-                {[
-                  "Sees your screen and job posting",
-                  "Listens to every question asked",
-                  "Generates natural-sounding responses",
-                  "Updates in real-time as conversation evolves"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
+          {/* Feature 1: Real-Time Answers */}
+          <div className="mb-32">
+            <div className="max-w-6xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 mb-12">
+                <div className="aspect-[16/10] bg-gradient-to-br from-blue-50 via-white to-blue-50/50 p-12 md:p-16">
+                  {/* Mock UI Window */}
+                  <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden h-full">
+                    {/* Window Header */}
+                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex gap-2">
+                          <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                          <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                          <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                        </div>
+                        <span className="text-sm font-semibold text-gray-700">Interview Copilot</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <span className="text-xs font-semibold text-green-600">LIVE</span>
+                      </div>
+                    </div>
+                    
+                    {/* Content Area */}
+                    <div className="p-8 h-full flex flex-col justify-center">
+                      <div className="max-w-2xl">
+                        <div className="flex items-start gap-4 mb-6">
+                          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wide">Interview Question</p>
+                            <p className="text-xl font-medium text-gray-900">"Walk me through your approach to system design."</p>
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-6 border border-blue-200">
+                          <div className="flex items-center gap-2 mb-4">
+                            <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                            </div>
+                            <span className="text-sm font-bold text-blue-900">Perfect Answer Ready</span>
+                          </div>
+                          <p className="text-base text-gray-800 leading-relaxed">
+                            "I start by clarifying requirements and constraints. Then I break down the problem into core components—data storage, API design, and scalability considerations..."
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                ))}
+                </div>
+              </div>
+
+              <div className="max-w-3xl">
+                <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  AI that answers questions for you, real‑time
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Interview Copilot sees your screen, listens to every question, and generates perfect answers based on your resume, the job description, and conversation context—all in milliseconds.
+                </p>
               </div>
             </div>
-            <div className="order-1 md:order-2">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-white p-8">
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
-                      <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Live Answer</span>
-                    </div>
-                    <div className="space-y-2 mb-4">
-                      <div className="h-2 bg-gray-200 rounded w-full"></div>
-                      <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-                      <div className="h-2 bg-gray-200 rounded w-4/6"></div>
-                    </div>
-                    <div className="flex gap-2">
-                      <div className="px-3 py-1.5 bg-blue-600 text-white text-xs font-semibold rounded-lg">
-                        Use This
-                      </div>
-                      <div className="px-3 py-1.5 bg-gray-100 text-gray-700 text-xs font-semibold rounded-lg">
-                        Refine
+          </div>
+
+          {/* Feature 2: Follow-up Emails */}
+          <div className="mb-32">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="order-2 md:order-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    Instant follow-up emails
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Send perfectly drafted follow-up emails within seconds after every call. References specific conversation moments and reinforces your key strengths.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-green-50 via-white to-green-50/50 p-8">
+                      <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 h-full flex flex-col">
+                        <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
+                          <span className="text-sm font-bold text-gray-900">Follow-up Email</span>
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span className="text-xs text-green-600 font-semibold">Ready</span>
+                          </div>
+                        </div>
+                        <div className="space-y-3 flex-1">
+                          <div className="h-3 bg-gray-200 rounded-full w-full"></div>
+                          <div className="h-3 bg-gray-200 rounded-full w-11/12"></div>
+                          <div className="h-3 bg-gray-200 rounded-full w-full"></div>
+                          <div className="h-3 bg-gray-200 rounded-full w-10/12"></div>
+                          <div className="h-3 bg-gray-200 rounded-full w-full"></div>
+                          <div className="h-3 bg-gray-200 rounded-full w-9/12"></div>
+                        </div>
+                        <div className="pt-4 border-t border-gray-200 mt-4">
+                          <button className="w-full py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                            Copy & Send
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -399,108 +450,275 @@ export default function InterviewCopilot() {
             </div>
           </div>
 
-          {/* Feature 2 */}
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-            <div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-white p-8">
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm font-bold text-gray-900">Follow-up Email</span>
-                      <span className="text-xs text-green-600 font-semibold">Ready to Send</span>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-2 bg-gray-200 rounded w-full"></div>
-                      <div className="h-2 bg-gray-200 rounded w-11/12"></div>
-                      <div className="h-2 bg-gray-200 rounded w-10/12"></div>
-                      <div className="h-2 bg-gray-200 rounded w-9/12"></div>
+          {/* Feature 3: Pre-Interview Research */}
+          <div className="mb-32">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 via-white to-purple-50/50 p-8">
+                      <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 h-full">
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                            <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                            </svg>
+                          </div>
+                          <div>
+                            <div className="text-sm font-bold text-gray-900">Sarah Chen</div>
+                            <div className="text-xs text-gray-500">Hiring Manager @ Google</div>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="flex justify-between text-sm">
+                            <span className="text-gray-600">Background</span>
+                            <span className="font-semibold text-gray-900">Stanford CS</span>
+                          </div>
+                          <div className="flex justify-between text-sm">
+                            <span className="text-gray-600">Role</span>
+                            <span className="font-semibold text-gray-900">8 years @ Google</span>
+                          </div>
+                          <div className="flex justify-between text-sm">
+                            <span className="text-gray-600">Focus</span>
+                            <span className="font-semibold text-gray-900">Cloud Infrastructure</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div>
-              <div className="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full mb-4 uppercase tracking-wide">
-                Instant Follow-Up
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Send perfect thank-you emails in seconds
-              </h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                After each interview, get a perfectly crafted follow-up email that references specific moments from your conversation. Personalized, professional, and ready to send.
-              </p>
-              <div className="space-y-3">
-                {[
-                  "References conversation highlights",
-                  "Reinforces your key strengths",
-                  "Professionally worded and structured",
-                  "One click to copy and send"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
+                <div>
+                  <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    Who are you really talking to?
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Learn everything about your interviewer before the call starts—where they work, what they do, their background, and interests. Walk in prepared.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Continue with Features 3 & 4... keeping the same pattern */}
+          {/* Feature 4: Beautiful Notes */}
+          <div>
+            <div className="max-w-6xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 mb-12">
+                <div className="aspect-[16/9] bg-gradient-to-br from-indigo-50 via-white to-indigo-50/50 p-12 md:p-16">
+                  <div className="bg-white rounded-2xl shadow-xl border border-gray-200 h-full p-8">
+                    <div className="flex items-center justify-between mb-8">
+                      <h4 className="text-2xl font-bold text-gray-900">Interview Notes</h4>
+                      <span className="text-sm text-gray-500">Generated in 0.3s</span>
+                    </div>
+                    <div className="space-y-6">
+                      <div>
+                        <div className="text-sm font-bold text-gray-900 mb-3">Key Discussion Points</div>
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0"></div>
+                            <div className="h-2 bg-gray-200 rounded-full flex-1"></div>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0"></div>
+                            <div className="h-2 bg-gray-200 rounded-full w-5/6"></div>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0"></div>
+                            <div className="h-2 bg-gray-200 rounded-full w-4/6"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-gray-900 mb-3">Your Answers</div>
+                        <div className="space-y-2">
+                          <div className="h-2 bg-gray-200 rounded-full w-full"></div>
+                          <div className="h-2 bg-gray-200 rounded-full w-11/12"></div>
+                          <div className="h-2 bg-gray-200 rounded-full w-10/12"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-gray-900 mb-3">Next Steps</div>
+                        <div className="space-y-2">
+                          <div className="h-2 bg-gray-200 rounded-full w-3/4"></div>
+                          <div className="h-2 bg-gray-200 rounded-full w-2/3"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div className="max-w-3xl">
+                <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  Beautiful meeting notes
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Instant shareable meeting notes generated by AI. Review your performance, share with mentors, or use for follow-up preparation.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section id="how-it-works" className="py-24 px-6 bg-gray-50">
+      {/* HOW IT WORKS - Cluely Style */}
+      <section id="how-it-works" className="py-32 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Three steps to interview mastery
+            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
+              Interview notes in 3 steps
             </h2>
-            <p className="text-xl text-gray-600">
-              The easiest way to never freeze in an interview again
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
+              The easiest way to get real-time help and beautiful,<br />shareable interview notes.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            {[
-              {
-                step: "1",
-                title: "Download & Launch",
-                desc: "One click to install. Launch before your interview starts. No setup required.",
-                icon: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              },
-              {
-                step: "2",
-                title: "Start Interview",
-                desc: "Join your video call as normal. Interview Copilot listens and watches—completely invisible.",
-                icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-              },
-              {
-                step: "3",
-                title: "Get Real-Time Help",
-                desc: "See perfect answers instantly as questions are asked. Copy, refine, or use as-is.",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z"
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="relative">
-                <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                    </svg>
+          <div className="space-y-32">
+            {/* Step 1 */}
+            <div className="relative">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 via-white to-blue-50/50 p-8">
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-full flex flex-col items-center justify-center p-8">
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center mb-6 shadow-xl">
+                          <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                          </svg>
+                        </div>
+                        <div className="text-center">
+                          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm font-bold rounded-full mb-4">
+                            One-Click Install
+                          </div>
+                          <div className="text-6xl font-black text-gray-900 mb-4">⌘</div>
+                          <p className="text-lg text-gray-600">Download and launch</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-5xl font-black text-blue-100 mb-4">{item.step}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
-                {idx < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-6 w-12 h-0.5 bg-gradient-to-r from-blue-300 to-transparent"></div>
-                )}
+                <div>
+                  <div className="text-[120px] md:text-[160px] font-black text-blue-50 leading-none mb-4">1</div>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                    Download Interview<br />Copilot
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Simply download the app and launch it before your<br />interview begins. No setup, no configuration, no hassle.
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="order-2 md:order-1">
+                  <div className="text-[120px] md:text-[160px] font-black text-green-50 leading-none mb-4">2</div>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                    Join your interview<br />as normal
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Start your Zoom, Teams, or Google Meet call.<br />Interview Copilot listens and watches—completely<br />invisible to everyone but you.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-green-50 via-white to-green-50/50 p-8">
+                      <div className="bg-gray-900 rounded-2xl shadow-lg border border-gray-700 h-full relative overflow-hidden">
+                        {/* Mock Video Call Interface */}
+                        <div className="absolute top-4 right-4 w-32 h-24 bg-gradient-to-br from-gray-800 to-gray-700 rounded-lg border border-gray-600"></div>
+                        <div className="absolute top-4 left-4 w-48 h-36 bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg border border-blue-700">
+                          <div className="p-4">
+                            <div className="w-16 h-16 rounded-full bg-blue-700 mb-2"></div>
+                            <div className="h-2 w-24 bg-blue-700/50 rounded"></div>
+                          </div>
+                        </div>
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+                          <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur border border-white/20"></div>
+                          <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur border border-white/20"></div>
+                          <div className="w-12 h-12 rounded-full bg-red-600/90 backdrop-blur"></div>
+                        </div>
+                        {/* Undetectable Badge */}
+                        <div className="absolute bottom-4 left-4 px-3 py-1.5 bg-green-500 rounded-lg">
+                          <span className="text-xs font-bold text-white">✓ Undetectable</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 via-white to-purple-50/50 p-8">
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-full p-6 flex flex-col">
+                        <div className="flex items-center justify-between mb-6">
+                          <span className="text-lg font-bold text-gray-900">Interview Complete</span>
+                          <div className="flex items-center gap-2">
+                            <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                            </svg>
+                            <span className="text-sm font-semibold text-green-600">Notes Ready</span>
+                          </div>
+                        </div>
+                        <div className="space-y-4 flex-1">
+                          <div className="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                            <div className="text-sm font-bold text-blue-900 mb-2">Key Highlights</div>
+                            <div className="space-y-1.5">
+                              <div className="h-2 bg-blue-200 rounded-full w-full"></div>
+                              <div className="h-2 bg-blue-200 rounded-full w-5/6"></div>
+                              <div className="h-2 bg-blue-200 rounded-full w-4/6"></div>
+                            </div>
+                          </div>
+                          <div className="p-4 bg-green-50 rounded-xl border border-green-200">
+                            <div className="text-sm font-bold text-green-900 mb-2">Your Strengths</div>
+                            <div className="space-y-1.5">
+                              <div className="h-2 bg-green-200 rounded-full w-full"></div>
+                              <div className="h-2 bg-green-200 rounded-full w-4/6"></div>
+                            </div>
+                          </div>
+                          <div className="p-4 bg-purple-50 rounded-xl border border-purple-200">
+                            <div className="text-sm font-bold text-purple-900 mb-2">Follow-up Actions</div>
+                            <div className="space-y-1.5">
+                              <div className="h-2 bg-purple-200 rounded-full w-5/6"></div>
+                              <div className="h-2 bg-purple-200 rounded-full w-3/6"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button className="mt-6 w-full py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+                          Download Notes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[120px] md:text-[160px] font-black text-purple-50 leading-none mb-4">3</div>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                    Get instant, beautiful<br />notes
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Interview Copilot uses what it heard and what it saw<br />on your screen to generate comprehensive notes,<br />follow-up emails, and action items.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-32 text-center">
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 text-white text-lg font-bold rounded-xl hover:bg-gray-800 hover:shadow-xl transition-all"
+            >
+              <span>Start Your First Interview</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
